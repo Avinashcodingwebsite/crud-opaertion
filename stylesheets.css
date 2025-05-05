@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    gap: 10px;
+}
+.cloumn{
+    flex:1;
+    padding: 25px;
+    background-color: rgb(204, 204, 202);
+    border:1px solid black;
+
+}
+table,th,tr,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 12px;
+}
