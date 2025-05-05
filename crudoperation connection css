@@ -1,0 +1,72 @@
+<!--Javascrpits applicatiopn and creative and update,delete, in  array batebasecred opertion-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cred operation</title>
+    <link rel="stylesheet" href="ram.css">
+   
+</head>
+<body>
+    <!--Creative Flex box container-->
+  <div class="container">
+    <!--fORM div-->
+    <div class="column">
+        <div class="container">
+            <!--Row1-->
+            <div class="column">
+                <label>First Name</label>
+                <input type="text" id="inputfname">
+            </div>
+            <!--Row 2-->
+            <div class="column">
+                <label>Second Name</label>
+                <input type="text" id="inputlname">
+            </div>
+        </div>
+        <!--Row3-->
+        <div class="container">
+            <div class="column">
+                <label>Email</label>
+                <!--input capable and object change in array in stored-->
+                <input type="text" id="inputemail">
+            </div>
+            <div class="column">
+                <label>Phone</label>
+                <input type="number" id="inputphone">
+            </div>
+        </div>
+        <button style="background-color:green; color:white" onclick="reaction()"> Submit</button>
+        <button style="background-color:blue; color:white" onclick="deletevalue()">Reset</button>
+      
+
+          
+      
+    
+    </div>
+   
+    <!--Table -->
+    <div class="column">
+        <table>
+    <thead>
+        <tr>
+            <th>FName</th>
+            <th>LName</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tbody id="userdetails">
+        </tbody>
+    </thead>
+        </table>
+
+    </div>
+  </div>
+  <!--Defer keyword in html code low runnering-->
+  
+  <script src="demo.js"></script>
+
+    
+</body>
+</html>
