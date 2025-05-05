@@ -1,0 +1,84 @@
+let names =[
+    {
+        // Creative in object
+        fname:"Vijay",
+        lname:"Kumar",
+        email:"avinash123@gmail.com",
+        phone:74984739948
+
+
+
+    },
+    {
+        //recording 3
+    fname:"Kavi",
+    lname:"Kumar",
+    email:"avinash123@gmail.com",
+    phone:74984739948
+},
+{  
+      fname:"Kavi",
+    lname:"Kumar",
+    email:"avinash123@gmail.com",
+    phone:74984739948
+
+},
+{
+    fname:"Arjun",
+    lname:"Kumar",
+    email:"avinash123@gmail.com",
+    phone:7498473994
+}
+
+]
+// CREATE AND THE SELECTION INPUT SELECTION AND BUTTON ACTION CREATE
+const reaction = ()=>{
+   const enterfname =  document.getElementById("inputfname").value
+   const enterlname = document.getElementById("inputlname").value
+   const entermail = document.getElementById("inputemail").value
+   const enterphone = document.getElementById("inputphone").value
+   // object concate
+   const newdata = {
+    fname:enterfname, //selectiong in object
+    lname:enterlname,//selecting and variable
+    email:entermail,
+    phone:enterphone
+}
+console.log(newdata);
+names.push(newdata)
+tablerefush();
+
+
+
+   }
+   // reset comment function 
+   const deletevalue = ()=>{
+    document.getElementById("inputfname").value=""
+ document.getElementById("inputlname").value=""
+  document.getElementById("inputemail").value=""
+  document.getElementById("inputphone").value=""
+
+   }
+
+
+
+const tablerefush = () =>{
+document.getElementById("userdetails").innerHTML= names.map((data,index)=>{
+    return `<tr>
+    <td>${data.fname}</td>
+   <td>${data.lname}</td>
+   <td>${data.email}</td>
+   <td>${data.phone}</td>
+   <td><button style="background-color:red; color:white;" onclick="handledelete(${index})">Delete</button></td>
+   </tr> 
+    `
+
+}).join("")
+}
+tablerefush();
+ // place on calling and delete function
+ const handledelete = (index)=>{
+    names.splice(index,1)
+    tablerefush();
+ }
+       
